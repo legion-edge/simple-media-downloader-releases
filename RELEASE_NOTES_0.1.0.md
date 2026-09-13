@@ -50,6 +50,6 @@ Windowsの「インストールされているアプリ」から削除できま�
 
 ## 利用条件・第三者告知・問い合わせ
 
-v0.1.0は無料で利用できます。変更していない公式配布バイナリは、利用条件と第三者告知を保持したまま転載・再配布できます。詳しくは[使用・再配布条件](APPLICATION-TERMS.txt)と[第三者ソフトウェアの案内](THIRD-PARTY-NOTICES.md)を確認してください。
+v0.1.0は無料で利用できます。変更していない公式配布バイナリは、利用条件と第三者告知を保持したまま転載・再配布できます。詳しくは[使用・再配布条件](https://github.com/legion-edge/simple-media-downloader-releases/blob/main/APPLICATION-TERMS.txt)と[第三者ソフトウェアの案内](https://github.com/legion-edge/simple-media-downloader-releases/blob/main/THIRD-PARTY-NOTICES.md)を確認してください。
 
 不具合・要望は[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)へ日本語で投稿できます。Xのアカウントは未確定であり、問い合わせに必要ありません。
