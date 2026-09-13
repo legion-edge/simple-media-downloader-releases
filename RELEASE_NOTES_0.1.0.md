@@ -1,15 +1,15 @@
-# Simple Media Downloader v0.1.0 リリースノート（公開前原稿）
-
-> v0.1.0のinstallerはまだ一般公開していません。この原稿は公開前レビュー用であり、公開操作時にこの状態表示を外してGitHub Release本文へ使用します。
+# Simple Media Downloader v0.1.0 リリースノート
 
 Simple Media Downloaderの初版です。Windows 11 x64で、YouTubeの通常動画とShortsを日本語画面からMP4またはMP3として保存できます。
 
-## 公開予定ファイル
+## 配布ファイル
 
 | ファイル | サイズ | SHA256 |
 | --- | ---: | --- |
-| `Simple Media Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` |
+| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` |
 | `distribution-manifest.json` | 7,167 bytes | `6352c11f7e3c1c5280295d926453e7a4521e9cf5d282ecc7f7a5db8b7046f926` |
+
+GitHubのasset名の処理により、installer名の空白はピリオドになっています。manifestに記録したビルド時の名前は`Simple Media Downloader_0.1.0_x64-setup.exe`ですが、ファイル内容・サイズ・SHA256は同一です。manifestは元のビルド記録を変更せず配布しています。
 
 ## 主な機能
 

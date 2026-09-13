@@ -6,28 +6,30 @@ Windows 11 x64向けの、日本語で使える動画・音声ダウンローダ
 
 ## 配布状況
 
-初版v0.1.0は公開準備中です。**現在、installer本体はダウンロードできません。**
+**初版v0.1.0を公開しました。** [v0.1.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)からWindows用installerを取得できます。
 
 [Releases](https://github.com/legion-edge/simple-media-downloader-releases/releases)にある`components-`で始まるReleaseは、アプリ内の「更新と修復」で使う部品用です。Windows installer本体ではありません。
 
-一般公開後は、[v0.1.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)から次の2ファイルを配布します。公開前のため、現時点ではリンク先のv0.1.0 Releaseとファイルは存在しません。
+[v0.1.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)で次の2ファイルを配布しています。
 
-| 公開予定ファイル | サイズ | SHA256 | 現在の状態 |
+| 配布ファイル | サイズ | SHA256 | 現在の状態 |
 | --- | ---: | --- | --- |
-| `Simple Media Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` | 未公開 |
-| `distribution-manifest.json` | 7,167 bytes | `6352c11f7e3c1c5280295d926453e7a4521e9cf5d282ecc7f7a5db8b7046f926` | 未公開 |
+| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` | 公開済み |
+| `distribution-manifest.json` | 7,167 bytes | `6352c11f7e3c1c5280295d926453e7a4521e9cf5d282ecc7f7a5db8b7046f926` | 公開済み |
 
-一般公開後は、ダウンロードしたファイルのSHA256を次のように確認できます。
+GitHubのasset名の処理により、installer名の空白はピリオドになっています。manifestに記録したビルド時の名前は`Simple Media Downloader_0.1.0_x64-setup.exe`ですが、ファイル内容・サイズ・SHA256は同一です。manifestは元のビルド記録を変更せず配布しています。
+
+ダウンロードしたファイルのSHA256を次のように確認できます。
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Simple Media Downloader_0.1.0_x64-setup.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Simple.Media.Downloader_0.1.0_x64-setup.exe'
 Get-FileHash -Algorithm SHA256 -LiteralPath '.\distribution-manifest.json'
 ```
 
 ## 動作環境と導入
 
 - 対象はWindows 11 x64です。他のOSとCPUは初版の対象外です。
-- `Simple Media Downloader_0.1.0_x64-setup.exe`を実行すると、現在のWindowsユーザー向けに導入します。通常は管理者権限を必要としません。
+- `Simple.Media.Downloader_0.1.0_x64-setup.exe`を実行すると、現在のWindowsユーザー向けに導入します。通常は管理者権限を必要としません。
 - Windowsコード署名は行っていないため、発行元やアプリの信頼性に関する警告が表示される場合があります。配布元がこのリポジトリであることと、上記SHA256が一致することを確認してください。
 - WebView2 Runtimeがない環境では、setupがMicrosoftのbootstrapperを取得するため、その時だけインターネット接続が必要です。取得や導入に失敗した場合は、接続と組織の実行制限を確認し、Microsoft公式のEvergreen WebView2 Runtimeを導入してからsetupを再実行してください。
 
@@ -73,4 +75,4 @@ v0.1.0は無料でダウンロード、インストール、利用できます�
 
 yt-dlp、EJS、Deno、FFmpeg等には各権利者のライセンスが適用されます。採用版、対応ソース、同梱する告知は[第三者ソフトウェアの案内](THIRD-PARTY-NOTICES.md)にまとめています。installerにはライセンス本文と固定した第三者告知を同梱します。
 
-v0.1.0の変更点と注意事項は[リリースノート原稿](RELEASE_NOTES_0.1.0.md)で確認できます。
+v0.1.0の変更点と注意事項は[リリースノート](RELEASE_NOTES_0.1.0.md)で確認できます。
