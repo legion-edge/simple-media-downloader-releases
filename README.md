@@ -1,10 +1,16 @@
-**v0.1.0の配布物を差し替え中です。ダウンロードを開始しないでください。** installerとmanifestの照合が完了するまで、以下の案内・hashは旧配布物の記録です。完了後に案内を更新します。
-
 # Simple Media Downloader
 
 Windows 11 x64向けの、日本語で使える動画・音声ダウンローダーです。
 
 このリポジトリは、配布ファイル、リリースノート、利用案内、不具合報告・要望の窓口として使用します。アプリ本体のソースコードは公開していません。
+
+## 2026-09-14の配布物更新
+
+告知前の修正として、同じv0.1.0のinstallerとmanifestを更新しました。現在の配布物はProgram Files配下への全ユーザー向け導入に対応し、起動時の内部確認だけが動いている場合の不要な終了確認を改善しています。
+
+以前のAppData版を導入済みの場合は、アプリを終了して旧版を手動アンインストールしてから、新しいsetupを実行してください。設定・履歴・更新構成のフォルダーと保存済みメディアは削除しないでください。自動移行機能はありません。
+
+配布物の識別には下表のSHA256を使用してください。v0.1.0タグは初回公開時の案内を指したまま維持し、現在の案内はmainに掲載しています。manifestのcommitは非公開のアプリ本体のビルド元を示し、公開案内のcommitとは別です。
 
 ## 配布状況
 
@@ -16,8 +22,8 @@ Windows 11 x64向けの、日本語で使える動画・音声ダウンローダ
 
 | 配布ファイル | サイズ | SHA256 | 現在の状態 |
 | --- | ---: | --- | --- |
-| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` | 公開済み |
-| `distribution-manifest.json` | 7,167 bytes | `6352c11f7e3c1c5280295d926453e7a4521e9cf5d282ecc7f7a5db8b7046f926` | 公開済み |
+| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,062,709 bytes | `c1e440593940621e1f97d46be01cefb53bc15666b79f529a5210fddd6da08503` | 公開済み |
+| `distribution-manifest.json` | 7,294 bytes | `673cd89404851030982abc2edd5a1fe6e4259459d40daa8a47daa953c05eef4f` | 公開済み |
 
 GitHubのasset名の処理により、installer名の空白はピリオドになっています。manifestに記録したビルド時の名前は`Simple Media Downloader_0.1.0_x64-setup.exe`ですが、ファイル内容・サイズ・SHA256は同一です。manifestは元のビルド記録を変更せず配布しています。
 
@@ -31,7 +37,7 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\distribution-manifest.json'
 ## 動作環境と導入
 
 - 対象はWindows 11 x64です。他のOSとCPUは初版の対象外です。
-- `Simple.Media.Downloader_0.1.0_x64-setup.exe`を実行すると、現在のWindowsユーザー向けに導入します。通常は管理者権限を必要としません。
+- `Simple.Media.Downloader_0.1.0_x64-setup.exe`を実行すると、Program Files配下へ全ユーザー向けに導入します。導入・削除には管理者権限が必要です。通常の起動・保存・部品更新は標準ユーザーで行えます。
 - Windowsコード署名は行っていないため、発行元やアプリの信頼性に関する警告が表示される場合があります。配布元がこのリポジトリであることと、上記SHA256が一致することを確認してください。
 - WebView2 Runtimeがない環境では、setupがMicrosoftのbootstrapperを取得するため、その時だけインターネット接続が必要です。取得や導入に失敗した場合は、接続と組織の実行制限を確認し、Microsoft公式のEvergreen WebView2 Runtimeを導入してからsetupを再実行してください。
 
@@ -54,7 +60,7 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\distribution-manifest.json'
 
 ## 削除とデータ保持
 
-Windowsの「インストールされているアプリ」から削除できます。アプリ本体と同梱部品は削除しますが、利用者が選んだ保存先のメディアは削除しません。
+Windowsの「インストールされているアプリ」から管理者権限を許可して削除できます。アプリ本体と同梱部品は削除しますが、利用者が選んだ保存先のメディアは削除しません。
 
 設定、履歴、取得した更新構成は、再導入や調査のため`%LOCALAPPDATA%\jp.legionedge.simple-media-downloader`に残します。完全に削除する場合は、アプリを終了し、必要なメディアを退避してから、この専用フォルダーを利用者自身で削除してください。
 
