@@ -2,12 +2,20 @@
 
 Simple Media Downloaderの初版です。Windows 11 x64で、YouTubeの通常動画とShortsを日本語画面からMP4またはMP3として保存できます。
 
+## 2026-09-14の配布物更新
+
+告知前の修正として、同じv0.1.0のinstallerとmanifestを更新しました。現在の配布物はProgram Files配下への全ユーザー向け導入に対応し、起動時の内部確認だけが動いている場合の不要な終了確認を改善しています。
+
+以前のAppData版を導入済みの場合は、アプリを終了して旧版を手動アンインストールしてから、新しいsetupを実行してください。設定・履歴・更新構成のフォルダーと保存済みメディアは削除しないでください。自動移行機能はありません。
+
+配布物の識別には下表のSHA256を使用してください。v0.1.0タグは初回公開時の案内を指したまま維持し、現在の案内はmainに掲載しています。manifestのcommitは非公開のアプリ本体のビルド元を示し、公開案内のcommitとは別です。
+
 ## 配布ファイル
 
 | ファイル | サイズ | SHA256 |
 | --- | ---: | --- |
-| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,067,417 bytes | `c0ba977441d62b1bd3758db9c3ab6d69d580685056a0b0cad2dc2606667ac2d0` |
-| `distribution-manifest.json` | 7,167 bytes | `6352c11f7e3c1c5280295d926453e7a4521e9cf5d282ecc7f7a5db8b7046f926` |
+| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,062,709 bytes | `c1e440593940621e1f97d46be01cefb53bc15666b79f529a5210fddd6da08503` |
+| `distribution-manifest.json` | 7,294 bytes | `673cd89404851030982abc2edd5a1fe6e4259459d40daa8a47daa953c05eef4f` |
 
 GitHubのasset名の処理により、installer名の空白はピリオドになっています。manifestに記録したビルド時の名前は`Simple Media Downloader_0.1.0_x64-setup.exe`ですが、ファイル内容・サイズ・SHA256は同一です。manifestは元のビルド記録を変更せず配布しています。
 
@@ -23,7 +31,7 @@ GitHubのasset名の処理により、installer名の空白はピリオドにな
 ## 導入と初回保存
 
 1. setup exeと、このページに掲載したSHA256が一致することを確認します。
-2. setup exeを実行します。現在のWindowsユーザー向けに導入するため、通常は管理者権限を必要としません。
+2. setup exeを実行します。Program Files配下へ全ユーザー向けに導入するため、管理者権限が必要です。通常の起動・保存・部品更新は標準ユーザーで行えます。
 3. WebView2 Runtimeがない場合だけ、Microsoftのbootstrapper取得にインターネット接続が必要です。
 4. スタートメニューから起動し、保存先、MP4／MP3、画質／音質／音声を確認して保存を開始します。
 
@@ -39,7 +47,7 @@ Node、Rust、yt-dlp、Deno、FFmpegの別途導入や手動PATH設定は不要�
 
 「更新と修復」から固定した公開配信の部品更新を確認・適用し、問題時は以前の正常構成または同梱構成へ戻せます。
 
-Windowsの「インストールされているアプリ」から削除できます。保存済みメディアは削除しません。設定、履歴、更新構成は再導入や調査のため`%LOCALAPPDATA%\jp.legionedge.simple-media-downloader`に残します。
+Windowsの「インストールされているアプリ」から管理者権限を許可して削除できます。保存済みメディアは削除しません。設定、履歴、更新構成は再導入や調査のため`%LOCALAPPDATA%\jp.legionedge.simple-media-downloader`に残します。
 
 ## 既知の制限
 
