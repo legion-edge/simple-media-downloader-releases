@@ -1,47 +1,41 @@
 # Simple Media Downloader
 
-Windows 11 x64向けの、日本語で使える動画・音声ダウンローダーです。
+Windows 11 x64向けの、日本語で使える無料のYouTube動画・音声保存アプリです。このリポジトリでは配布物、利用案内、不具合報告を扱います。アプリ本体のソースコードは公開していません。
 
-このリポジトリは、配布ファイル、リリースノート、利用案内、不具合報告・要望の窓口として使用します。アプリ本体のソースコードは公開していません。
+## ダウンロード
 
-## 2026-09-14の配布物更新
+無料版完成版 **v1.0.0** を2026-09-20（JST）に公開しました。[公式ダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.0.0)で次の2ファイルを配布しています。
 
-告知前の修正として、同じv0.1.0のinstallerとmanifestを更新しました。現在の配布物はProgram Files配下への全ユーザー向け導入に対応し、起動時の内部確認だけが動いている場合の不要な終了確認を改善しています。
+| ファイル | サイズ（bytes） | SHA256 |
+| --- | ---: | --- |
+| [Simple.Media.Downloader_1.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.0.0/Simple.Media.Downloader_1.0.0_x64-setup.exe) | 106118436 | `8eff5fa58af274e0d543ef6556749edddd1c10c29e3beffb9e1f106526d836b2` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.0.0/distribution-manifest.json) | 7739 | `084787ef97c5c1917185d2f3eaef7d6d15ff43a7274c9a69c3274847ab0448d4` |
 
-以前のAppData版を導入済みの場合は、アプリを終了して旧版を手動アンインストールしてから、新しいsetupを実行してください。設定・履歴・更新構成のフォルダーと保存済みメディアは削除しないでください。自動移行機能はありません。
+manifestにあるビルド時の名前は`Simple Media Downloader_1.0.0_x64-setup.exe`です。公開asset名は空白をピリオドにした名前を使います。内容・サイズ・SHA256は同じです。manifestの`candidate-only`と作成日時はビルド時の記録として保持し、一般公開の実績はこの案内とReleaseに記載します。manifestのcommitは非公開本体のビルド元であり、公開repoのtag対象commitとは別です。
 
-配布物の識別には下表のSHA256を使用してください。v0.1.0タグは初回公開時の案内を指したまま維持し、現在の案内はmainに掲載しています。manifestのcommitは非公開のアプリ本体のビルド元を示し、公開案内のcommitとは別です。
+`components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにもinstallerは含まれません。導入には上表のsetup exeを使ってください。
 
-## 配布状況
-
-**初版v0.1.0を公開しました。** [v0.1.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)からWindows用installerを取得できます。
-
-[Releases](https://github.com/legion-edge/simple-media-downloader-releases/releases)にある`components-`で始まるReleaseは、アプリ内の「更新と修復」で使う部品用です。Windows installer本体ではありません。
-
-[v0.1.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)で次の2ファイルを配布しています。
-
-| 配布ファイル | サイズ | SHA256 | 現在の状態 |
-| --- | ---: | --- | --- |
-| `Simple.Media.Downloader_0.1.0_x64-setup.exe` | 106,062,709 bytes | `c1e440593940621e1f97d46be01cefb53bc15666b79f529a5210fddd6da08503` | 公開済み |
-| `distribution-manifest.json` | 7,294 bytes | `673cd89404851030982abc2edd5a1fe6e4259459d40daa8a47daa953c05eef4f` | 公開済み |
-
-GitHubのasset名の処理により、installer名の空白はピリオドになっています。manifestに記録したビルド時の名前は`Simple Media Downloader_0.1.0_x64-setup.exe`ですが、ファイル内容・サイズ・SHA256は同一です。manifestは元のビルド記録を変更せず配布しています。
-
-ダウンロードしたファイルのSHA256を次のように確認できます。
+ダウンロード先でPowerShellを開き、SHA256を確認できます。
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Simple.Media.Downloader_0.1.0_x64-setup.exe'
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\distribution-manifest.json'
+Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.0.0_x64-setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 ```
 
-## 動作環境と導入
+## v0.1.0からの改善
 
-- 対象はWindows 11 x64です。他のOSとCPUは初版の対象外です。
-- `Simple.Media.Downloader_0.1.0_x64-setup.exe`を実行すると、Program Files配下へ全ユーザー向けに導入します。導入・削除には管理者権限が必要です。通常の起動・保存・部品更新は標準ユーザーで行えます。
-- Windowsコード署名は行っていないため、発行元やアプリの信頼性に関する警告が表示される場合があります。配布元がこのリポジトリであることと、上記SHA256が一致することを確認してください。
-- WebView2 Runtimeがない環境では、setupがMicrosoftのbootstrapperを取得するため、その時だけインターネット接続が必要です。取得や導入に失敗した場合は、接続と組織の実行制限を確認し、Microsoft公式のEvergreen WebView2 Runtimeを導入してからsetupを再実行してください。
+初回保存先案内、コンパクトな一覧と進捗表示、1列／2列の切替、初期OFFのクリップボードURL取込み、ファイル名書式、チャンネル別フォルダー保存、本体の手動更新確認、問い合わせと診断プレビューを追加・改善しました。詳しくは[v1.0.0リリースノート](RELEASE_NOTES_1.0.0.md)をご覧ください。
 
-利用者がNode、Rust、yt-dlp、Deno、FFmpegを別途導入したり、PATHを設定したりする必要はありません。セキュリティ機能を一律に無効化しないでください。
+## 動作環境と導入・更新
+
+- Windows 11 x64向けです。setupを実行するとProgram Files配下へ全ユーザー向けに導入します。導入・削除には管理者権限が必要です。通常の起動・保存・部品更新は標準ユーザーで行えます。
+- Windowsコード署名はありません。SmartScreenや不明な発行元の警告が表示される場合があります。公式配布元とSHA256を確認し、表示内容を確認して導入を判断してください。警告の有無は環境・取得経路により異なります。
+- WebView2 Runtimeがない場合は、setupによるMicrosoftのbootstrapper取得にインターネット接続が必要です。導入に失敗した場合は接続と組織の実行制限を確認し、Microsoft公式のEvergreen WebView2 Runtimeを導入してから再実行してください。
+- Node、Rust、yt-dlp、Deno、FFmpegの別途導入やPATH設定は不要です。
+
+現行Program Files版v0.1.0からは、アプリを終了して新setupを実行します。**公開済みv0.1.0には本体更新確認ボタンがないため、公式配布ページから手動取得してください。** 設定・履歴・保存済みメディアを保持します。非互換の旧部品構成は同梱構成へ復旧する場合があります。更新後に「更新と修復」で本体版1.0.0と部品の状態を確認してください。
+
+旧AppData版を利用している場合は、アプリを終了して旧版を手動アンインストールしてからProgram Files版を導入してください。設定・履歴・更新構成の専用フォルダーと保存済みメディアは削除しないでください。独自の自動移行はありません。
 
 ## 初回の保存
 
@@ -54,9 +48,9 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\distribution-manifest.json'
 
 ## 更新と修復
 
-「更新と修復」は、同梱したyt-dlp、Deno、FFmpeg等の部品構成を確認・更新・復旧する機能です。アプリ本体の自動更新ではありません。
+v1.0.0では利用者が本体の更新確認を選んだときだけ、公式Releaseの新版を確認します。取得・インストールは手動で、自動確認・自動更新は行いません。
 
-更新情報は、この公開リポジトリの`components-stable` ReleaseからHTTPSで取得し、アプリ本体に固定したEd25519公開鍵で署名を検証します。問題がある場合は、以前の正常構成または同梱構成へ戻せます。Windowsコード署名とは別の仕組みです。
+部品更新は別の機能です。この公開repoの`components-stable`をHTTPSで取得し、本体に固定したEd25519公開鍵で署名を検証して、yt-dlp、Deno、FFmpeg等の構成を適用します。問題時は以前の正常構成または同梱構成へ戻せます。部品の署名検証はWindowsコード署名とは別の仕組みです。
 
 ## 削除とデータ保持
 
@@ -64,23 +58,25 @@ Windowsの「インストールされているアプリ」から管理者権限�
 
 設定、履歴、取得した更新構成は、再導入や調査のため`%LOCALAPPDATA%\jp.legionedge.simple-media-downloader`に残します。完全に削除する場合は、アプリを終了し、必要なメディアを退避してから、この専用フォルダーを利用者自身で削除してください。
 
-## 既知の制限
+## 対応範囲と制約
 
-- 対象はYouTubeの公開された通常動画とShortsです。プレイリスト全件、ログインが必要な動画、非公開動画、ライブ配信、他サイトには対応しません。
-- 配信元の仕様変更、アクセス制限、ネットワークや組織のポリシーにより、情報取得や保存が失敗する場合があります。
-- 初版はWindowsコード署名なしのため、SmartScreen等の表示は環境や取得経路によって異なります。警告が表示されないことは保証しません。
-- 保存するコンテンツについて、著作権その他の権利と各サービスの利用条件を確認し、必要な許可を得てください。
+- ログイン不要で取得できるYouTube通常動画・ShortsをMP4／MP3へ保存します。プレイリスト展開、ログイン・Cookie・認証が必要な対象、配信中のライブ録画、他サイトは対象外です。
+- サービス側の変更、botアクセス確認、HTTP 403、ネットワーク・組織の制限により保存できない場合があります。すべての形式や再生機器への対応は保証しません。
+- 推定残り時間は現在取得中のストリームの目安です。結合・変換を含む保存全体の完了時刻ではありません。
+- 保存する内容の権利と各サービスの利用条件を確認し、必要な許可を得てください。
 
-## 不具合報告・要望
+## 問い合わせ
 
-[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)を主な窓口として受け付けます。日本語で投稿できます。
+[X @legion_edge_dev](https://x.com/legion_edge_dev)を主窓口、[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)を詳しい不具合報告の補助窓口としています。GitHubへの投稿にはアカウントが必要です。
 
-アプリのバージョン、Windowsのバージョン、再現手順、期待した結果と実際の結果を記載してください。個人情報、認証情報、署名付きメディアURLを含むログは掲載しないでください。Xのアカウントは未確定であり、問い合わせに必要ありません。
+本体版、Windowsの版、再現手順、期待と実際の結果をお知らせください。v1.0.0の「問い合わせ」には共有前に内容を確認できる診断プレビューと手動コピーがあります。自動送信はしません。個人情報、認証情報、Cookie、生ログ、署名付きメディアURL、メディア自体は公開しないでください。
 
 ## 利用条件と第三者ソフトウェア
 
-v0.1.0は無料でダウンロード、インストール、利用できます。変更していない公式配布バイナリは、利用条件と第三者告知を保持したまま転載・再配布できます。詳しくは[使用・再配布条件](APPLICATION-TERMS.txt)を確認してください。
+v1.0.0は無料で利用できます。変更していない公式配布バイナリは、利用条件と第三者告知を保持すれば転載・再配布できます。[APPLICATION-TERMS.txt](APPLICATION-TERMS.txt)、`THIRD-PARTY-NOTICES.txt`と`licenses`フォルダーを保持してください。本体ソースは非公開で、OSSライセンスを付与していません。
 
-yt-dlp、EJS、Deno、FFmpeg等には各権利者のライセンスが適用されます。採用版、対応ソース、同梱する告知は[第三者ソフトウェアの案内](THIRD-PARTY-NOTICES.md)にまとめています。installerにはライセンス本文と固定した第三者告知を同梱します。
+第三者ソフトウェアには各権利者のライセンスが適用されます。[採用版・対応ソース・同梱告知](THIRD-PARTY-NOTICES.md)を確認してください。
 
-v0.1.0の変更点と注意事項は[リリースノート](RELEASE_NOTES_0.1.0.md)で確認できます。
+## 過去の公開
+
+v0.1.0の無料利用・未変更バイナリの転載／再配布許諾は変更しません。当時の条件は[旧利用条件](https://github.com/legion-edge/simple-media-downloader-releases/blob/721d3d780fc284fa6ebd438948d25d2e895ba3ee/APPLICATION-TERMS.txt)で確認できます。2026-09-14の初回公開と、告知前の同版Program Files版への差し替えは[v0.1.0リリースノート](RELEASE_NOTES_0.1.0.md)に保持しています。[旧Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v0.1.0)のtagと2assetは維持しています。

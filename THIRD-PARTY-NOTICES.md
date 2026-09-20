@@ -1,6 +1,6 @@
 # 第三者ソフトウェアの案内
 
-Simple Media Downloader v0.1.0のWindows x64配布物には、次の固定した第三者ソフトウェアを変更せずに同梱します。各ソフトウェアには、それぞれの権利者が定めたライセンスが適用されます。
+Simple Media Downloader v1.0.0のWindows x64配布物には、次の固定した第三者ソフトウェアを変更せずに同梱します。各ソフトウェアには、それぞれの権利者が定めたライセンスが適用されます。
 
 | 部品 | 採用版 | ライセンス・対応ソース |
 | --- | --- | --- |
@@ -16,6 +16,8 @@ installerには`THIRD-PARTY-NOTICES.txt`と`licenses`フォルダーを収録し
 
 公開する`distribution-manifest.json`には、同梱した告知ファイルの名前、サイズ、SHA256を記録します。再配布する場合は、`APPLICATION-TERMS.txt`、`THIRD-PARTY-NOTICES.txt`、`licenses`フォルダーを削除せず、各ライセンスの条件に従ってください。
 
-[部品構成Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/components-win-x64-20260914-1)はアプリの「更新と修復」用です。installer本体ではありませんが、同じ固定部品と告知を含みます。
+[部品構成Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/components-win-x64-20260920-1)はアプリの「更新と修復」用です。installer本体ではありませんが、同じ固定部品と告知を含みます。
 
 WebView2 Runtimeはアプリへ同梱しません。Windowsに存在しない場合だけ、installerがMicrosoftのbootstrapperを取得します。
+
+v0.1.0から4実行ファイルとEJSの版は変えていません。v1.0.0のアプリ依存告知は新しい配布manifestに記録した内容です。旧部品構成と告知の記録は既存Releaseに保持しています。
