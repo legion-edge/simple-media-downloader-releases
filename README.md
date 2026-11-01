@@ -15,6 +15,16 @@ manifestにあるビルド時の名前は`Simple Media Downloader_1.0.0_x64-setu
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにもinstallerは含まれません。導入には上表のsetup exeを使ってください。
 
+## 共用配布: WebP JPEG Converter 1.1.0
+
+このリポジトリでは、WebP JPEG ConverterのWindows x64向けポータブルZIPも配布します。[WebP JPEG Converter 1.1.0のRelease](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/webp-v1.1.0)から次のファイルを取得できます。
+
+| ファイル | サイズ（bytes） | SHA256 |
+| --- | ---: | --- |
+| [WebpZipConverter-1.1.0-windows-x64.zip](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/webp-v1.1.0/WebpZipConverter-1.1.0-windows-x64.zip) | 21323669 | `1e0fb0128dfa7f2cbf03a6b45f442adbda6e29b30f9ea435c1c03b3a75d9eca9` |
+
+これはSimple Media Downloader本体・インストーラー・部品更新ではありません。`webp-`で始まるタグは、Simple Media Downloaderの本体更新検査で版番として認識されません。ZIPを別のフォルダへすべて展開し、`WebpZipConverter.exe` を起動してください。Windowsコード署名はありません。
+
 ダウンロード先でPowerShellを開き、SHA256を確認できます。
 
 ```powershell
