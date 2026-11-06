@@ -4,14 +4,15 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 
 ## ダウンロード
 
-最新の **v1.1.2** は2026-11-03（JST）公開です。[v1.1.2のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)から次の2ファイルを配布します。
+最新の **v1.1.2** は2026-11-03（JST）公開、配布物は2026-11-06にPC単位認証・起動改善版へ更新しました。[v1.1.2のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)から次の3ファイルを配布します。最初の識別付きEXEを推奨します。通常名のEXEは同じ内容の互換用別名です。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.1.2_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/Simple.Media.Downloader_1.1.2_x64-setup.exe) | 107467305 | `225aff07b37ed378837660fa17cddbacab9a948cc1914b114908d2502f2ebce7` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/distribution-manifest.json) | 5192 | `fc1a05ac1fa68cdd4e410c3d2035177d883d7a189bcff80337da4e9e9480c49a` |
+| [Simple.Media.Downloader_1.1.2_pc-v3-startup_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/Simple.Media.Downloader_1.1.2_pc-v3-startup_x64-setup.exe) | 107469387 | `e5bf2573354bf2e04e73e094479c6aefea19f29b0142620839c2b4137ca0e24e` |
+| [Simple.Media.Downloader_1.1.2_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/Simple.Media.Downloader_1.1.2_x64-setup.exe) | 107469387 | `e5bf2573354bf2e04e73e094479c6aefea19f29b0142620839c2b4137ca0e24e` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/distribution-manifest.json) | 5319 | `d0a230e8c455a79ef847c355ddfcb2ef46052e179c582838c3bd0f1f74dd056b` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.1.2_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`2d951e513c3f8e3a125090ac3d2b3a1790951437`です。
+manifestにあるinstaller名は`Simple Media Downloader_1.1.2_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`f6fb844ede6d6fddb3a890a4d8d21667ed2b1d6b`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
@@ -23,6 +24,10 @@ v1.1.2はFreeとProで同じアプリを使います。購入ライセンスが�
 - Pro: プレイリスト展開、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
 
 対象サービス側の仕様変更、公開状態、bot確認、HTTPエラー、ネットワークや組織の制限により保存できない場合があります。すべての形式や再生方法への対応は保証しません。詳しくは[Webマニュアル](https://legion-edge.dev/smd/manual/)を確認してください。
+
+1ライセンスで最大2台のPCを登録できます。同じWindows環境の別ユーザーは1台分を共有しますが、有効化と保護保存は各ユーザーで行います。OS再インストール等で別PC扱いになる場合があります。詳しくは[購入ライセンスの案内](https://legion-edge.dev/smd/manual/#license)を確認してください。
+
+同じ1.1.2番号の旧配布物とは認証方式が異なります。アプリの版番号による更新確認では差を検出しないため、上記の識別付きEXEを手動で導入し、必要に応じてProを再認証してください。Free機能の購入認証は不要です。
 
 ## 共用配布: WebP JPEG Converter 1.1.0
 
