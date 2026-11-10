@@ -4,21 +4,20 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 
 ## ダウンロード
 
-最新の **v1.1.2** は2026-11-03（JST）公開、配布物は2026-11-06にPC単位認証・起動改善版へ更新しました。[v1.1.2のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)から次の3ファイルを配布します。最初の識別付きEXEを推奨します。通常名のEXEは同じ内容の互換用別名です。
+最新の **v1.2.0** は2026-11-10（JST）に公開しました。[v1.2.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.2.0)から次の2ファイルを配布します。変更内容は[v1.2.0のリリースノート](RELEASE_NOTES_1.2.0.md)を確認してください。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.1.2_pc-v3-startup_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/Simple.Media.Downloader_1.1.2_pc-v3-startup_x64-setup.exe) | 107469387 | `e5bf2573354bf2e04e73e094479c6aefea19f29b0142620839c2b4137ca0e24e` |
-| [Simple.Media.Downloader_1.1.2_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/Simple.Media.Downloader_1.1.2_x64-setup.exe) | 107469387 | `e5bf2573354bf2e04e73e094479c6aefea19f29b0142620839c2b4137ca0e24e` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.1.2/distribution-manifest.json) | 5319 | `d0a230e8c455a79ef847c355ddfcb2ef46052e179c582838c3bd0f1f74dd056b` |
+| [Simple.Media.Downloader_1.2.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/Simple.Media.Downloader_1.2.0_x64-setup.exe) | 107480891 | `1c14691a68bdb6421d4e13e7a659b6cb59c5bcee717b2c70a768034052d392d9` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/distribution-manifest.json) | 6464 | `d848e5a5ac72a5e5168612d1b184d0e5d9fe614629bc6b32ed040a06f72a6d0e` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.1.2_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`f6fb844ede6d6fddb3a890a4d8d21667ed2b1d6b`です。
+manifestにあるinstaller名は`Simple Media Downloader_1.2.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`ab0944dae1e5c99bc5a48cfabd51d5ee8dcee98d`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
 ## FreeとPro
 
-v1.1.2はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro購入ライセンス」からライセンスキーを確認するとPro機能が有効になります。
+v1.2.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
 
 - Free: 公開YouTube通常動画・Shorts、公開Twitch VOD・Clipの単体保存、MP4／MP3、履歴・更新確認など。
 - Pro: プレイリスト展開、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
@@ -26,8 +25,6 @@ v1.1.2はFreeとProで同じアプリを使います。購入ライセンスが�
 対象サービス側の仕様変更、公開状態、bot確認、HTTPエラー、ネットワークや組織の制限により保存できない場合があります。すべての形式や再生方法への対応は保証しません。詳しくは[Webマニュアル](https://legion-edge.dev/smd/manual/)を確認してください。
 
 1ライセンスで最大2台のPCを登録できます。同じWindows環境の別ユーザーは1台分を共有しますが、有効化と保護保存は各ユーザーで行います。OS再インストール等で別PC扱いになる場合があります。詳しくは[購入ライセンスの案内](https://legion-edge.dev/smd/manual/#license)を確認してください。
-
-同じ1.1.2番号の旧配布物とは認証方式が異なります。アプリの版番号による更新確認では差を検出しないため、上記の識別付きEXEを手動で導入し、必要に応じてProを再認証してください。Free機能の購入認証は不要です。
 
 ## 共用配布: WebP JPEG Converter 1.1.0
 
@@ -42,7 +39,7 @@ v1.1.2はFreeとProで同じアプリを使います。購入ライセンスが�
 ダウンロード後はPowerShellでSHA256を確認できます。
 
 ```powershell
-Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.1.2_x64-setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.2.0_x64-setup.exe' -Algorithm SHA256
 Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 ```
 
@@ -90,6 +87,7 @@ Free機能は無料で利用できます。Pro機能には正規に発行され�
 
 ## 過去の公開
 
+- [v1.1.2 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)
 - [v1.1.1 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.1)
 - [v1.1.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.0)
 - [v1.0.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.0.0)
