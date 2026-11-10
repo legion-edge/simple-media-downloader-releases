@@ -8,10 +8,10 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.2.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/Simple.Media.Downloader_1.2.0_x64-setup.exe) | 107480891 | `1c14691a68bdb6421d4e13e7a659b6cb59c5bcee717b2c70a768034052d392d9` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/distribution-manifest.json) | 6464 | `d848e5a5ac72a5e5168612d1b184d0e5d9fe614629bc6b32ed040a06f72a6d0e` |
+| [Simple.Media.Downloader_1.2.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/Simple.Media.Downloader_1.2.0_x64-setup.exe) | 107492170 | `9e3ce78bb13753b47e25ced106c49f47543e4b346f0dbbea7fa78187248a0219` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/distribution-manifest.json) | 6464 | `85a3b0ab62409e9ccaf161048825ee0f13a58b39303da496f063d2599781e4c8` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.2.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`ab0944dae1e5c99bc5a48cfabd51d5ee8dcee98d`です。
+manifestにあるinstaller名は`Simple Media Downloader_1.2.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`ae9148eed19eed89b7952738c09a3dc4589d02af`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 

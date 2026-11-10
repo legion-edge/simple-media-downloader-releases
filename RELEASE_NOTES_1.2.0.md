@@ -2,7 +2,7 @@
 
 公開日: 2026-11-10（JST）
 
-**配布ファイル:** `Simple.Media.Downloader_1.2.0_x64-setup.exe`（107480891 bytes / SHA256 `1c14691a68bdb6421d4e13e7a659b6cb59c5bcee717b2c70a768034052d392d9`）
+**配布ファイル:** `Simple.Media.Downloader_1.2.0_x64-setup.exe`（107492170 bytes / SHA256 `9e3ce78bb13753b47e25ced106c49f47543e4b346f0dbbea7fa78187248a0219`）
 
 ## 主な変更
 
@@ -41,6 +41,8 @@
 ### 不具合の修正
 
 - YouTube Mix（`list=RD...`）のプレイリストで、選んだ動画を「ホームに追加」すると「プレイリスト保存計画の識別子を確認できません。」と表示されて追加できない問題を修正しました。
+- プレイリスト画面に、説明文の代わりに内部の文言キー（`playlist.addHelp`）が表示される問題を修正しました。
+- ホームで認証を選んだときの案内などで、ライブ録画画面が旧名称の「Proライブ」「Proライブ録画」と表示される問題を修正しました。現在の画面名「ライブ録画」に統一しています。
 
 ### 利用条件
 
@@ -66,6 +68,6 @@ FreeとProは同じアプリです。購入ライセンスがなくても、Free
 - WebView2 Runtimeがない環境では、導入時にMicrosoftのbootstrapperの取得が必要です。
 - 本体の更新は手動です。アプリは正式な`vX.Y.Z` Releaseを確認しますが、自動取得や自動インストールは行いません。
 - Free機能の利用に購入ライセンスは不要です。
-- ソースcommit: `ab0944dae1e5c99bc5a48cfabd51d5ee8dcee98d`
+- ソースcommit: `ae9148eed19eed89b7952738c09a3dc4589d02af`
 
 Webマニュアル: https://legion-edge.dev/smd/manual/
