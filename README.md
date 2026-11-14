@@ -9,7 +9,7 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
 | [Simple.Media.Downloader_1.3.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/Simple.Media.Downloader_1.3.0_x64-setup.exe) | 107625606 | `846c2ee1f7b668b38d0a0ca71cf98158e07772ff6f163a11e4fd3a4600bc54c0` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/distribution-manifest.json) | 8255 | `83738a11bbc8a76e332f501409d0dfb606f489308d99ee63694822d8f41233ab` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/distribution-manifest.json) | 8267 | `1ddcc7f0390611563850fb0d5037decd1e3b5d5e8334354a7f64c9219f3bb456` |
 
 manifestにあるinstaller名は`Simple Media Downloader_1.3.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`6a9efb1f46a9be3783388fd5deaead7b19a76f5e`です。
 
