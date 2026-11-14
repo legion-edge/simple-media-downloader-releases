@@ -4,23 +4,23 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 
 ## ダウンロード
 
-最新の **v1.2.0** は2026-11-10（JST）に公開しました。[v1.2.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.2.0)から次の2ファイルを配布します。変更内容は[v1.2.0のリリースノート](RELEASE_NOTES_1.2.0.md)を確認してください。
+最新の **v1.3.0** は2026-11-14（JST）に公開しました。[v1.3.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.3.0)から次の2ファイルを配布します。変更内容は[v1.3.0のリリースノート](RELEASE_NOTES_1.3.0.md)を確認してください。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.2.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/Simple.Media.Downloader_1.2.0_x64-setup.exe) | 107492170 | `9e3ce78bb13753b47e25ced106c49f47543e4b346f0dbbea7fa78187248a0219` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.2.0/distribution-manifest.json) | 6464 | `85a3b0ab62409e9ccaf161048825ee0f13a58b39303da496f063d2599781e4c8` |
+| [Simple.Media.Downloader_1.3.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/Simple.Media.Downloader_1.3.0_x64-setup.exe) | 107625606 | `846c2ee1f7b668b38d0a0ca71cf98158e07772ff6f163a11e4fd3a4600bc54c0` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/distribution-manifest.json) | 8267 | `1ddcc7f0390611563850fb0d5037decd1e3b5d5e8334354a7f64c9219f3bb456` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.2.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`ae9148eed19eed89b7952738c09a3dc4589d02af`です。
+manifestにあるinstaller名は`Simple Media Downloader_1.3.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`6a9efb1f46a9be3783388fd5deaead7b19a76f5e`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
 ## FreeとPro
 
-v1.2.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
+v1.3.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
 
-- Free: 公開YouTube通常動画・Shorts、公開Twitch VOD・Clipの単体保存、MP4／MP3、履歴・更新確認など。
-- Pro: プレイリスト展開、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
+- Free: 公開YouTube通常動画・Shorts、公開Twitch VOD・Clipの単体保存、MP4／MP3、登録チャンネルの新着確認、履歴・更新確認など。
+- Pro: プレイリスト展開、対応動画の区間保存、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
 
 対象サービス側の仕様変更、公開状態、bot確認、HTTPエラー、ネットワークや組織の制限により保存できない場合があります。すべての形式や再生方法への対応は保証しません。詳しくは[Webマニュアル](https://legion-edge.dev/smd/manual/)を確認してください。
 
@@ -39,7 +39,7 @@ v1.2.0はFreeとProで同じアプリを使います。購入ライセンスが�
 ダウンロード後はPowerShellでSHA256を確認できます。
 
 ```powershell
-Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.2.0_x64-setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.3.0_x64-setup.exe' -Algorithm SHA256
 Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 ```
 
@@ -87,6 +87,7 @@ Free機能は無料で利用できます。Pro機能には正規に発行され�
 
 ## 過去の公開
 
+- [v1.2.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.2.0)
 - [v1.1.2 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)
 - [v1.1.1 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.1)
 - [v1.1.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.0)

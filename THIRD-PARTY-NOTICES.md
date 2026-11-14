@@ -1,4 +1,4 @@
-Simple Media Downloader 1.1.0 - third-party notices index
+Simple Media Downloader 1.3.0 - third-party notices index
 ================================================================
 
 This file describes the fixed third-party software in the Windows x64
