@@ -4,20 +4,20 @@ Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリ�
 
 ## ダウンロード
 
-最新の **v1.3.0** は2026-11-14（JST）に公開しました。[v1.3.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.3.0)から次の2ファイルを配布します。変更内容は[v1.3.0のリリースノート](RELEASE_NOTES_1.3.0.md)を確認してください。
+最新の **v1.5.0** は2026-11-17（JST）に公開しました。[v1.5.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.5.0)から次の2ファイルを配布します。変更内容は[v1.5.0のリリースノート](RELEASE_NOTES_1.5.0.md)を確認してください。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.3.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/Simple.Media.Downloader_1.3.0_x64-setup.exe) | 107625606 | `846c2ee1f7b668b38d0a0ca71cf98158e07772ff6f163a11e4fd3a4600bc54c0` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.3.0/distribution-manifest.json) | 8267 | `1ddcc7f0390611563850fb0d5037decd1e3b5d5e8334354a7f64c9219f3bb456` |
+| [Simple.Media.Downloader_1.5.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.5.0/Simple.Media.Downloader_1.5.0_x64-setup.exe) | 107755510 | `c99666e70a9859f29838c936b01a70e36be59c5b76c6af16971eff3570d839c0` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.5.0/distribution-manifest.json) | 8290 | `b7519c9cb8c0636d07bb7cd8362c6bc8b1b953972afa95798afbe678a45e350e` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.3.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`6a9efb1f46a9be3783388fd5deaead7b19a76f5e`です。
+manifestにあるinstaller名は`Simple Media Downloader_1.5.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`5a69e0592cfadfd4b445f6bf9df3dcb77337e338`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
 ## FreeとPro
 
-v1.3.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
+v1.5.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
 
 - Free: 公開YouTube通常動画・Shorts、公開Twitch VOD・Clipの単体保存、MP4／MP3、登録チャンネルの新着確認、履歴・更新確認など。
 - Pro: プレイリスト展開、対応動画の区間保存、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
@@ -39,7 +39,7 @@ v1.3.0はFreeとProで同じアプリを使います。購入ライセンスが�
 ダウンロード後はPowerShellでSHA256を確認できます。
 
 ```powershell
-Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.3.0_x64-setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.5.0_x64-setup.exe' -Algorithm SHA256
 Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 ```
 
