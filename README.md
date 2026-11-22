@@ -13,6 +13,8 @@ Windows 11 x64向けの、日本語・英語で使えるYouTube・Twitch保存�
 
 manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`30d7137d786488972e00af5995c44b9fb23ab3c5`です。
 
+公式サイトのダウンロードボタンは現在v1.5.0を案内しています。**v2.0.0は上記のGitHub直接リンクから取得してください。** 公式サイトの配布欄の更新は別途行います。
+
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
 ## FreeとPro
@@ -77,7 +79,7 @@ Windowsの「インストールされているアプリ」から管理者権限�
 
 ## 問い合わせ
 
-[X @legion_edge](https://x.com/legion_edge)を主な問い合わせ先として利用してください。詳しい不具合報告には[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)も使えます（GitHubアカウントが必要です）。
+[X @legion_edge](https://x.com/legion_edge)を主な問い合わせ先として利用してください。詳しい報告には製品内と同じ[機能要望・不具合報告フォーム](https://docs.google.com/forms/d/e/1FAIpQLSdG1TYaue14khNdVW9KcRstt9DUkRtrgl3aBqkG00UuulYHzQ/viewform)を利用できます。[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)も使えます（GitHubアカウントが必要です）。
 
 本体版、Windows版、再現手順、期待した結果と実際の結果を知らせてください。個人情報、認証情報、Cookie、購入ライセンス、限定コンテンツのURL、媒体そのものは公開しないでください。
 

@@ -32,6 +32,8 @@
 
 2.0.0対応の部品構成 `win-x64-20261123-1` を公開しました。1.2.1／1.3.0／1.4.0／1.5.0の互換性と、同梱するyt-dlp・Deno・FFmpeg／ffprobeの版を維持しています。
 
+公式サイトのダウンロードボタンは現在v1.5.0を案内しています。v2.0.0は[GitHub Releaseのinstaller](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe)から取得してください。公式サイトの配布欄の更新は別途行います。
+
 ## 導入・更新
 
 1. 実行中のSimple Media Downloaderを終了します。
