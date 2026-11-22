@@ -1,23 +1,23 @@
 # Simple Media Downloader
 
-Windows 11 x64向けの、日本語で使えるYouTube・Twitch保存アプリです。このリポジトリでは配布物、利用条件、リリースノート、不具合報告窓口を公開します。アプリ本体のソースコードは公開していません。
+Windows 11 x64向けの、日本語・英語で使えるYouTube・Twitch保存アプリです。このリポジトリでは配布物、利用条件、リリースノート、不具合報告窓口を公開します。アプリ本体のソースコードは公開していません。
 
 ## ダウンロード
 
-最新の **v1.5.0** は2026-11-17（JST）に公開しました。[v1.5.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.5.0)から次の2ファイルを配布します。変更内容は[v1.5.0のリリースノート](RELEASE_NOTES_1.5.0.md)を確認してください。
+最新の **v2.0.0** は2026-11-23（JST）に公開しました。[v2.0.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v2.0.0)から次の2ファイルを配布します。変更内容は[v2.0.0のリリースノート](RELEASE_NOTES_2.0.0.md)を確認してください。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_1.5.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.5.0/Simple.Media.Downloader_1.5.0_x64-setup.exe) | 107755510 | `c99666e70a9859f29838c936b01a70e36be59c5b76c6af16971eff3570d839c0` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v1.5.0/distribution-manifest.json) | 8290 | `b7519c9cb8c0636d07bb7cd8362c6bc8b1b953972afa95798afbe678a45e350e` |
+| [Simple.Media.Downloader_2.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe) | 107835232 | `fa83d941117b64044d3039eae497523e33f3b1e5e5888b4ac73a1016cb9fe09b` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/distribution-manifest.json) | 5055 | `acfb617acf6e87a3cb18a5051db6d235909d5a07b49864dcf0505e28809ca7e2` |
 
-manifestにあるinstaller名は`Simple Media Downloader_1.5.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`5a69e0592cfadfd4b445f6bf9df3dcb77337e338`です。
+manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`30d7137d786488972e00af5995c44b9fb23ab3c5`です。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
 ## FreeとPro
 
-v1.5.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
+v2.0.0はFreeとProで同じアプリを使います。購入ライセンスがなくてもFree機能を利用でき、購入後は「保存設定」の「Pro」にある購入ライセンスの欄でライセンスキーを確認すると、Pro機能が有効になります。
 
 - Free: 公開YouTube通常動画・Shorts、公開Twitch VOD・Clipの単体保存、MP4／MP3、登録チャンネルの新着確認、履歴・更新確認など。
 - Pro: プレイリスト展開、対応動画の区間保存、YouTube／Twitchライブ録画、本人が視聴権限と保存許可を確認した認証付き媒体など。
@@ -39,7 +39,7 @@ v1.5.0はFreeとProで同じアプリを使います。購入ライセンスが�
 ダウンロード後はPowerShellでSHA256を確認できます。
 
 ```powershell
-Get-FileHash -LiteralPath '.\Simple.Media.Downloader_1.5.0_x64-setup.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\Simple.Media.Downloader_2.0.0_x64-setup.exe' -Algorithm SHA256
 Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 ```
 
@@ -65,6 +65,8 @@ Get-FileHash -LiteralPath '.\distribution-manifest.json' -Algorithm SHA256
 
 本体の更新確認はこのリポジトリの正式な`vX.Y.Z` Releaseだけを対象にします。取得・インストールは手動で、自動更新や無人更新は行いません。
 
+現在の部品構成 `win-x64-20261123-1` は1.2.1／1.3.0／1.4.0／1.5.0／2.0.0に対応します。
+
 部品更新は別の仕組みです。署名済みmanifestを固定公開鍵で検証し、yt-dlp、Deno、FFmpegなどを更新します。途中で失敗した場合は以前の正常構成または同等構成へ戻します。
 
 ## 削除とデータ保持
@@ -75,7 +77,7 @@ Windowsの「インストールされているアプリ」から管理者権限�
 
 ## 問い合わせ
 
-[問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdG1TYaue14khNdVW9KcRstt9DUkRtrgl3aBqkG00UuulYHzQ/viewform)、[X @legion_edge_dev](https://x.com/legion_edge_dev)、または[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)を利用できます。
+[X @legion_edge](https://x.com/legion_edge)を主な問い合わせ先として利用してください。詳しい不具合報告には[GitHub Issues](https://github.com/legion-edge/simple-media-downloader-releases/issues)も使えます（GitHubアカウントが必要です）。
 
 本体版、Windows版、再現手順、期待した結果と実際の結果を知らせてください。個人情報、認証情報、Cookie、購入ライセンス、限定コンテンツのURL、媒体そのものは公開しないでください。
 
@@ -86,6 +88,10 @@ Free機能は無料で利用できます。Pro機能には正規に発行され�
 第三者ソフトウェアには各権利者のライセンスが適用されます。[採用版・対応ソース・通知](THIRD-PARTY-NOTICES.md)を確認してください。
 
 ## 過去の公開
+
+- [v1.5.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.5.0)
+- [v1.4.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.4.0)
+- [v1.3.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.3.0)
 
 - [v1.2.0 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.2.0)
 - [v1.1.2 Release](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v1.1.2)
