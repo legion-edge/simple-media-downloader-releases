@@ -8,12 +8,12 @@ Windows 11 x64向けの、日本語・英語で使えるYouTube・Twitch保存�
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_2.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe) | 107835232 | `fa83d941117b64044d3039eae497523e33f3b1e5e5888b4ac73a1016cb9fe09b` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/distribution-manifest.json) | 5055 | `acfb617acf6e87a3cb18a5051db6d235909d5a07b49864dcf0505e28809ca7e2` |
+| [Simple.Media.Downloader_2.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe) | 107830677 | `3bb71e5596ba46841510331744b74b2761e103eba3c7d925dff66d005dd33707` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/distribution-manifest.json) | 5055 | `85a11b29d1580bff5ec68f30498a04df2a444159e05458579452d05110383240` |
 
-manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`30d7137d786488972e00af5995c44b9fb23ab3c5`です。
+manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`cce237f4dd13652f8b7167616aee3019efd9cec1`です。
 
-公式サイトのダウンロードボタンは現在v1.5.0を案内しています。**v2.0.0は上記のGitHub直接リンクから取得してください。** 公式サイトの配布欄の更新は別途行います。
+最新main `cce237f4dd13652f8b7167616aee3019efd9cec1` から、同じバージョンのv2.0.0を再作成しました。前回のv2.0.0をご利用の場合も、修正を反映するにはインストーラーを再取得して実行してください。同じバージョンのため、アプリ内の新版通知には表示されません。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
@@ -30,13 +30,13 @@ v2.0.0はFreeとProで同じアプリを使います。購入ライセンスが�
 
 ## 共用配布: WebP JPEG Converter 1.1.0
 
-このリポジトリでは、WebP JPEG ConverterのWindows x64向けポータブルZIPも配布します。[WebP JPEG Converter 1.1.0のRelease](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/webp-v1.1.0)から次のファイルを取得できます。
+このリポジトリではWebP JPEG ConverterのWindows x64向けポータブルZIPも配布します。[WebP JPEG Converter 1.1.0のRelease](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/webp-v1.1.0)から次のファイルを取得できます。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
 | [WebpZipConverter-1.1.0-windows-x64.zip](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/webp-v1.1.0/WebpZipConverter-1.1.0-windows-x64.zip) | 21323669 | `1e0fb0128dfa7f2cbf03a6b45f442adbda6e29b30f9ea435c1c03b3a75d9eca9` |
 
-これはSimple Media Downloader本体・installer・部品更新ではありません。`webp-`で始まるタグは、Simple Media Downloaderの本体更新確認では版番号として認識されません。ZIPを別のフォルダーへすべて展開し、`WebpZipConverter.exe`を起動してください。Windowsコード署名はありません。
+これはSimple Media Downloader本体・installer・部品更新ではありません。`webp-`で始まるタグはSimple Media Downloaderの本体更新確認では版番号として認識されません。ZIPを別のフォルダーへすべて展開し、`WebpZipConverter.exe`を起動してください。Windowsコード署名はありません。
 
 ダウンロード後はPowerShellでSHA256を確認できます。
 
@@ -85,7 +85,7 @@ Windowsの「インストールされているアプリ」から管理者権限�
 
 ## 利用条件と第三者ソフトウェア
 
-Free機能は無料で利用できます。Pro機能には正規に発行された購入ライセンスが必要です。無変更の公開バイナリは、[APPLICATION-TERMS.txt](APPLICATION-TERMS.txt)、第三者ライセンス、同梱の`THIRD-PARTY-NOTICES.txt`と`licenses`フォルダーを保持する条件で転載・再配布できます。本体ソースは非公開です。
+Free機能は無料で利用できます。Pro機能には正規に発行された購入ライセンスが必要です。無変更の公開バイナリは[APPLICATION-TERMS.txt](APPLICATION-TERMS.txt)、第三者ライセンス、同梱の`THIRD-PARTY-NOTICES.txt`と`licenses`フォルダーを保持する条件で転載・再配布できます。本体ソースは非公開です。
 
 第三者ソフトウェアには各権利者のライセンスが適用されます。[採用版・対応ソース・通知](THIRD-PARTY-NOTICES.md)を確認してください。
 
