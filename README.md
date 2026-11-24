@@ -4,16 +4,16 @@ Windows 11 x64向けの、日本語・英語で使えるYouTube・Twitch保存�
 
 ## ダウンロード
 
-最新の **v2.0.0** は2026-11-23（JST）に公開しました。[v2.0.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v2.0.0)から次の2ファイルを配布します。変更内容は[v2.0.0のリリースノート](RELEASE_NOTES_2.0.0.md)を確認してください。
+最新の **v2.0.0** は2026-11-23に初回公開し、2026-11-24に配布ファイルを更新しました（日本時間）。[v2.0.0のダウンロードページ](https://github.com/legion-edge/simple-media-downloader-releases/releases/tag/v2.0.0)から次の2ファイルを配布します。変更内容は[v2.0.0のリリースノート](RELEASE_NOTES_2.0.0.md)を確認してください。
 
 | ファイル | サイズ（bytes） | SHA256 |
 | --- | ---: | --- |
-| [Simple.Media.Downloader_2.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe) | 107830677 | `3bb71e5596ba46841510331744b74b2761e103eba3c7d925dff66d005dd33707` |
-| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/distribution-manifest.json) | 5055 | `85a11b29d1580bff5ec68f30498a04df2a444159e05458579452d05110383240` |
+| [Simple.Media.Downloader_2.0.0_x64-setup.exe](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/Simple.Media.Downloader_2.0.0_x64-setup.exe) | 107833581 | `8a5303656177751f1cb562ad5d675d429462319442b50a38bbc79f02d414cccb` |
+| [distribution-manifest.json](https://github.com/legion-edge/simple-media-downloader-releases/releases/download/v2.0.0/distribution-manifest.json) | 8290 | `f8338c82c8ddfb5b07379c4a514869a21c366bb776e1c05c8d7181fbe5a5385d` |
 
-manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`cce237f4dd13652f8b7167616aee3019efd9cec1`です。
+manifestにあるinstaller名は`Simple Media Downloader_2.0.0_x64-setup.exe`です。公開assetには空白を含まない名前を使いますが、内容・サイズ・SHA256は同じです。manifestのcommitは非公開本体のビルド元`b9670b706217e210d86f4e88ea2ba8e63d4773ac`です。
 
-最新main `cce237f4dd13652f8b7167616aee3019efd9cec1` から、同じバージョンのv2.0.0を再作成しました。前回のv2.0.0をご利用の場合も、修正を反映するにはインストーラーを再取得して実行してください。同じバージョンのため、アプリ内の新版通知には表示されません。
+最新main `b9670b706217e210d86f4e88ea2ba8e63d4773ac` から、同じバージョンのv2.0.0を再作成しました。仮Proが有効なとき、プレイリストとライブ録画に有効期限を表示します。開発用の案内が出る問題を修正しました。すでにv2.0.0をお使いの場合も、修正を反映するにはインストーラーを再取得して実行してください。同じバージョンのため、アプリ内の新版通知には表示されません。
 
 `components-`で始まるReleaseはアプリ内の部品更新用です。GitHubが自動表示する「Source code」archiveにinstallerは含まれません。必ず上記のsetup exeを使ってください。
 
